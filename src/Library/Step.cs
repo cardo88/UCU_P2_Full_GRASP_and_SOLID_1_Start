@@ -12,7 +12,7 @@ namespace Full_GRASP_And_SOLID.Library
         {
             this.Quantity = quantity;
             this.Input = input;
-            this.Time = time;
+            this.Time = time;  //minutos
             this.Equipment = equipment;
         }
 
