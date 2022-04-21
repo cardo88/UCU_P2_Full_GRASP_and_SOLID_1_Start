@@ -11,7 +11,7 @@ namespace Full_GRASP_And_SOLID.Library
         public Product(string description, double unitCost)
         {
             this.Description = description;
-            this.UnitCost = unitCost;
+            this.UnitCost = unitCost; // el kilo o litro
         }
 
         public string Description { get; set; }

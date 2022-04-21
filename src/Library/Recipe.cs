@@ -33,6 +33,27 @@ namespace Full_GRASP_And_SOLID.Library
                 Console.WriteLine($"{step.Quantity} de '{step.Input.Description}' " +
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
             }
+            Console.WriteLine($"El costo total es de ${this.GetProductionCost()}");
+        }
+
+        /// <summary>
+        /// se aplica el principio de SRP, de tal forma que la clase "Recipe" siga 
+        /// siendo la responsable de la receta, por consiguiente de su impresión en pantalla,
+        /// y entonces de realizar el cálculo del total de su costo.
+        /// </summary>
+        /// <returns>CostoTotal</returns>
+        public double GetProductionCost()
+        {
+            double productsCost = 0 ;
+            double equipmentCost = 0;
+            foreach (Step step in this.steps)
+            {
+                productsCost += step.Input.UnitCost * step.Quantity / 1000;
+                equipmentCost += step.Equipment.HourlyCost * step.Time / 60;
+            }
+            
+            return productsCost + equipmentCost;
+
         }
     }
 }
