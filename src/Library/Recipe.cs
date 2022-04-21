@@ -38,8 +38,8 @@ namespace Full_GRASP_And_SOLID.Library
 
         /// <summary>
         /// se aplica el principio de SRP, de tal forma que la clase "Recipe" siga 
-        /// siendo la responsable de la receta, por consiguiente de su impresión en pantalla
-        /// de la misma, y por consiguiente de realizar el cálculo del total del costo.
+        /// siendo la responsable de la receta, por consiguiente de su impresión en pantalla,
+        /// y entonces de realizar el cálculo del total de su costo.
         /// </summary>
         /// <returns>CostoTotal</returns>
         public double GetProductionCost()
